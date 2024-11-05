@@ -1,10 +1,30 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About Me</router-link> |
+    <router-link to="/skills">Skills</router-link>
   </nav>
   <router-view/>
+  <Sidebar />
+<div :style="{ marginLeft: sidebarWidth }">
+
+  </div>
 </template>
+
+<script>
+import Sidebar from "@/components/sidebar/Sidebar.vue"
+import {sidebarWidth} from "@/components/sidebar/state"
+import AboutViewVue from './views/AboutView.vue'
+
+export default {
+  components: {Sidebar,
+  AboutViewVue
+  },
+  setup(){
+    return {sidebarWidth}
+  }
+}
+</script>
 
 <style>
 #app {
@@ -12,7 +32,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #90969b;
 }
 
 nav {
@@ -25,6 +45,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #4a90e2;
 }
 </style>
