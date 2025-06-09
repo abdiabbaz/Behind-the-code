@@ -61,14 +61,14 @@ setup(){
     flex-direction: column;
 }
 
-.collapse.icon{
+.collapse-icon{
     position: absolute;
     bottom: 0;
     padding: 0.75em;
 
     color: rgba(255,255,255,0.7);
 
-    transition: o.2s linear;
+    transition: 0.2s linear;
 }
 
 .rotate-180{
